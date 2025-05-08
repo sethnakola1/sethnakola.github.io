@@ -6,121 +6,152 @@
     <title>AIConnect Hub - AI Business Efficiency Suite</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f5f7fa;
             color: #333;
-            text-align: center;
+            line-height: 1.6;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
         }
         .header {
-            background-color: #007bff;
+            background: linear-gradient(135deg, #007bff, #00c4ff);
             color: white;
-            padding: 30px;
-            border-radius: 8px 8px 0 0;
+            padding: 50px 20px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
         }
         .header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 2.8em;
+            font-weight: 700;
         }
         .header p {
-            font-size: 1.2em;
+            font-size: 1.3em;
             margin: 10px 0;
         }
-        .features {
-            padding: 20px;
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #ff6f61;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #e65a50;
+        }
+        .insights {
+            padding: 40px 20px;
             background-color: white;
-            border-radius: 0 0 8px 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .feature {
+            border-radius: 10px;
             margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
-        .feature h3 {
+        .insights h2 {
             color: #007bff;
-            font-size: 1.5em;
+            font-size: 2.2em;
+            margin-bottom: 20px;
         }
-        .benefits {
-            padding: 20px;
-            background-color: #f9f9f9;
-            margin: 20px 0;
-            border-radius: 8px;
-        }
-        .benefits h2 {
-            color: #007bff;
-            font-size: 1.8em;
-        }
-        .benefit-item {
-            margin: 15px 0;
-        }
-        .testimonials {
-            padding: 20px;
-            background-color: white;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .testimonial {
-            margin: 15px 0;
-            font-style: italic;
-        }
-        .faq {
-            padding: 20px;
-            background-color: #f9f9f9;
-            margin: 20px 0;
-            border-radius: 8px;
-        }
-        .faq h2 {
-            color: #007bff;
-            font-size: 1.8em;
-        }
-        .faq-item {
-            margin: 15px 0;
+        .insight-item {
+            margin: 30px 0;
             text-align: left;
         }
-        .waitlist-form {
-            margin: 30px 0;
+        .insight-item h3 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 10px;
         }
-        .waitlist-form input[type="email"] {
-            padding: 10px;
-            width: 250px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+        .insight-item p {
+            font-size: 1.1em;
+            color: #666;
+        }
+        .features {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+        }
+        .features h2 {
+            color: #007bff;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+        .feature {
+            margin: 30px 0;
+            text-align: left;
+        }
+        .feature h3 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .waitlist-form {
+            padding: 40px 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+        .waitlist-form h2 {
+            color: #007bff;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .waitlist-form input[type="email"],
+        .waitlist-form input[type="text"] {
+            padding: 12px;
+            width: 300px;
+            max-width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
             font-size: 1em;
+            margin: 10px 0;
+            box-sizing: border-box;
         }
         .waitlist-form button {
-            padding: 10px 20px;
+            padding: 12px 30px;
             background-color: #007bff;
             color: white;
             border: none;
-            border-radius: 4px;
-            font-size: 1em;
+            border-radius: 25px;
+            font-size: 1.1em;
             cursor: pointer;
-            margin-left: 10px;
+            margin: 10px;
         }
         .waitlist-form button:hover {
             background-color: #0056b3;
         }
-        .product-link {
-            margin: 20px 0;
-        }
-        .product-link a {
-            color: #007bff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .product-link a:hover {
-            text-decoration: underline;
-        }
         .footer {
-            margin-top: 30px;
+            padding: 20px;
             font-size: 0.9em;
             color: #666;
+        }
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            .header p {
+                font-size: 1em;
+            }
+            .waitlist-form input[type="email"],
+            .waitlist-form input[type="text"] {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -128,82 +159,50 @@
     <div class="container">
         <div class="header">
             <h1>AIConnect Hub</h1>
-            <p>AI-Powered Business Efficiency Suite – Coming Soon!</p>
+            <p>Supercharge Your Small Business with the AI Business Efficiency Suite</p>
+            <a href="#waitlist" class="cta-button">Join the Waitlist</a>
         </div>
-        <div class="features">
-            <h2>Streamline Your Business with AI</h2>
-            <p>Join the waitlist to be the first to try our all-in-one suite for small businesses.</p>
 
+        <div class="insights">
+            <h2>Valuable Insights for Small Businesses</h2>
+            <div class="insight-item">
+                <h3>Time is Money: Save Up to 15 Hours a Week</h3>
+                <p>Small businesses spend an average of 20% of their week on administrative tasks like scheduling and inventory management (HubSpot, 2024). The AI Business Efficiency Suite automates these tasks, saving you up to 15 hours weekly—time you can reinvest in growing your business.</p>
+            </div>
+            <div class="insight-item">
+                <h3>Cut Operational Costs by 20%</h3>
+                <p>Supply chain inefficiencies cost small businesses 10–15% of their revenue annually (McKinsey, 2023). Our AI Supply Chain Optimizer predicts inventory needs and optimizes supplier selection, potentially reducing costs by up to 20%.</p>
+            </div>
+            <div class="insight-item">
+                <h3>Stay Ahead with Predictive Financial Insights</h3>
+                <p>80% of small businesses lack in-house financial expertise (SCORE, 2024). Our AI Financial Dashboard provides predictive cash flow forecasts and expense optimization, helping you make data-driven decisions to stay competitive.</p>
+            </div>
+        </div>
+
+        <div class="features">
+            <h2>Explore the AI Business Efficiency Suite</h2>
             <div class="feature">
                 <h3>AI Meeting Scheduler</h3>
-                <p>Save hours by automating meeting scheduling. Our AI suggests optimal times and sends invites, so you can focus on growing your business.</p>
+                <p>Eliminate back-and-forth emails. Our AI analyzes schedules, suggests optimal meeting times, and sends invites—saving you hours each week.</p>
             </div>
-
             <div class="feature">
                 <h3>AI Financial Dashboard</h3>
-                <p>Get actionable financial insights with AI. Track expenses, forecast cash flow, and make smarter decisions without the hassle.</p>
+                <p>Get a clear view of your finances with AI-driven insights. Track expenses, predict cash flow, and identify savings opportunities effortlessly.</p>
             </div>
-
             <div class="feature">
                 <h3>AI Supply Chain Optimizer</h3>
-                <p>Optimize inventory and supplier selection effortlessly. Our AI predicts stock needs, reducing downtime and costs for small businesses.</p>
+                <p>Never overstock or run out again. Our AI forecasts inventory needs, optimizes stock levels, and suggests the best suppliers for your business.</p>
             </div>
+        </div>
 
-            <div class="benefits">
-                <h2>Why Choose AI Business Efficiency Suite?</h2>
-                <div class="benefit-item">
-                    <h4>Save Time</h4>
-                    <p>Automate repetitive tasks like scheduling and inventory management, saving up to 10 hours per week for small business owners.</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>Reduce Costs</h4>
-                    <p>AI-driven insights help you optimize expenses and inventory, potentially saving 15–20% on operational costs.</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>Make Smarter Decisions</h4>
-                    <p>Get predictive financial forecasts and supply chain recommendations to stay ahead of the competition.</p>
-                </div>
-            </div>
-
-            <div class="testimonials">
-                <h2>What Small Businesses Are Saying</h2>
-                <div class="testimonial">
-                    <p>“AIConnect Hub’s suite is a game-changer! I can’t wait to use their AI tools to manage my retail inventory.”</p>
-                    <p><strong>– Priya S., Retail Owner</strong></p>
-                </div>
-                <div class="testimonial">
-                    <p>“Scheduling meetings across teams has never been easier. Excited for the full launch!”</p>
-                    <p><strong>– Mark T., Operations Manager</strong></p>
-                </div>
-            </div>
-
-            <div class="faq">
-                <h2>Frequently Asked Questions</h2>
-                <div class="faq-item">
-                    <h4>When will the suite be available?</h4>
-                    <p>We’re aiming to launch our beta in Q3 2025. Join the waitlist to get early access!</p>
-                </div>
-                <div class="faq-item">
-                    <h4>How much will it cost?</h4>
-                    <p>Pricing starts at $20/month per module, or $50/month for the full suite. We’ll offer a free trial at launch.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Who is this for?</h4>
-                    <p>Small businesses (2–50 employees) in retail, manufacturing, or professional services looking to save time and reduce costs.</p>
-                </div>
-            </div>
-
-            <div class="waitlist-form">
-                <h3>Join the Waitlist</h3>
-                <form action="https://formsubmit.co/sethnakola8@gmail.com" method="POST">
-                    <input type="email" name="email" placeholder="Enter your email" required>
-                    <button type="submit">Join Now</button>
-                </form>
-            </div>
-
-            <div class="product-link">
-                <p>Learn more about our product: <a href="YOUR_PRODUCT_LINK_HERE" target="_blank">AI Business Efficiency Suite</a></p>
-            </div>
+        <div class="waitlist-form" id="waitlist">
+            <h2>Join the Waitlist for Early Access</h2>
+            <form action="https://formsubmit.co/sethnakola8@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Enter your name" required>
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <input type="text" name="company" placeholder="Enter your company (optional)">
+                <button type="submit">Join Now</button>
+            </form>
         </div>
 
         <div class="footer">
