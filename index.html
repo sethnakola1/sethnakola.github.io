@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIConnect Hub - AI Business Efficiency Suite</title>
+    <title>AIConnect Hub - AI Business Efficiency Tools</title>
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -93,41 +93,88 @@
             font-size: 1.5em;
             margin-bottom: 10px;
         }
+        .feature p {
+            font-size: 1.1em;
+            color: #666;
+        }
         .waitlist-form {
-            padding: 40px 20px;
-            background-color: white;
+            padding: 40px;
+            background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             margin: 20px 0;
+            background: linear-gradient(145deg, #ffffff, #f0f4f8);
         }
         .waitlist-form h2 {
             color: #007bff;
             font-size: 2em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
             margin-bottom: 20px;
         }
-        .waitlist-form input[type="email"],
-        .waitlist-form input[type="text"] {
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        .form-group label {
+            font-size: 0.9em;
+            color: #555;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+        .form-group input[type="email"],
+        .form-group input[type="text"],
+        .form-group select,
+        .form-group textarea {
             padding: 12px;
-            width: 300px;
-            max-width: 100%;
             border: 1px solid #ddd;
-            border-radius: 5px;
+            border-radius: 6px;
             font-size: 1em;
-            margin: 10px 0;
-            box-sizing: border-box;
+            background-color: #fff;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: border-color 0.3s;
+        }
+        .form-group input[type="email"]:focus,
+        .form-group input[type="text"]:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        .form-group input[type="email"],
+        .form-group input[type="text"],
+        .form-group select {
+            height: 40px;
         }
         .waitlist-form button {
-            padding: 12px 30px;
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 12px;
             background-color: #007bff;
             color: white;
             border: none;
             border-radius: 25px;
             font-size: 1.1em;
+            font-weight: 600;
             cursor: pointer;
-            margin: 10px;
+            transition: background-color 0.3s, transform 0.1s;
         }
         .waitlist-form button:hover {
             background-color: #0056b3;
+            transform: scale(1.05);
         }
         .footer {
             padding: 20px;
@@ -148,8 +195,13 @@
             .header p {
                 font-size: 1em;
             }
-            .waitlist-form input[type="email"],
-            .waitlist-form input[type="text"] {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            .waitlist-form {
+                padding: 20px;
+            }
+            .waitlist-form button {
                 width: 100%;
             }
         }
@@ -159,48 +211,79 @@
     <div class="container">
         <div class="header">
             <h1>AIConnect Hub</h1>
-            <p>Supercharge Your Small Business with the AI Business Efficiency Suite</p>
+            <p>Supercharge Your Small Business with AI Business Efficiency Tools</p>
             <a href="#waitlist" class="cta-button">Join the Waitlist</a>
         </div>
 
         <div class="insights">
-            <h2>Valuable Insights for Small Businesses</h2>
+            <h2>Valuable Insights to Improve Business Productivity</h2>
             <div class="insight-item">
                 <h3>Time is Money: Save Up to 15 Hours a Week</h3>
-                <p>Small businesses spend an average of 20% of their week on administrative tasks like scheduling and inventory management (HubSpot, 2024). The AI Business Efficiency Suite automates these tasks, saving you up to 15 hours weekly—time you can reinvest in growing your business.</p>
+                <p>Small businesses spend an average of 20% of their week on administrative tasks like scheduling and inventory management (HubSpot, 2024). Our AI business automation software can save you up to 15 hours weekly—time to focus on growth.</p>
             </div>
             <div class="insight-item">
-                <h3>Cut Operational Costs by 20%</h3>
-                <p>Supply chain inefficiencies cost small businesses 10–15% of their revenue annually (McKinsey, 2023). Our AI Supply Chain Optimizer predicts inventory needs and optimizes supplier selection, potentially reducing costs by up to 20%.</p>
+                <h3>Cut Operational Costs by 20% with AI Supply Chain Optimizer</h3>
+                <p>Supply chain inefficiencies cost small businesses 10–15% of their revenue annually (McKinsey, 2023). Our AI supply chain optimizer predicts inventory needs, reducing costs by up to 20%.</p>
             </div>
             <div class="insight-item">
                 <h3>Stay Ahead with Predictive Financial Insights</h3>
-                <p>80% of small businesses lack in-house financial expertise (SCORE, 2024). Our AI Financial Dashboard provides predictive cash flow forecasts and expense optimization, helping you make data-driven decisions to stay competitive.</p>
+                <p>80% of small businesses lack in-house financial expertise (SCORE, 2024). Our AI financial dashboard offers predictive cash flow forecasts to enhance small business time management and decision-making.</p>
             </div>
         </div>
 
         <div class="features">
-            <h2>Explore the AI Business Efficiency Suite</h2>
+            <h2>Explore the Best Small Business Automation Software</h2>
             <div class="feature">
                 <h3>AI Meeting Scheduler</h3>
-                <p>Eliminate back-and-forth emails. Our AI analyzes schedules, suggests optimal meeting times, and sends invites—saving you hours each week.</p>
+                <p>Small business owners often juggle multiple roles, leaving little time for coordination. Our AI Meeting Scheduler eliminates the hassle of back-and-forth emails by analyzing team schedules, suggesting optimal meeting times, and sending professional invites automatically. For example, a small consulting firm can save 5 hours a week previously spent on scheduling, allowing the owner to focus on client work. This tool ensures seamless coordination, boosts productivity, and helps your business run like a well-oiled machine.</p>
             </div>
             <div class="feature">
                 <h3>AI Financial Dashboard</h3>
-                <p>Get a clear view of your finances with AI-driven insights. Track expenses, predict cash flow, and identify savings opportunities effortlessly.</p>
+                <p>Financial management can be a nightmare for small businesses without a dedicated accountant. Our AI Financial Dashboard simplifies this by providing a clear, real-time view of your finances. It tracks expenses, predicts cash flow with 90% accuracy, and highlights savings opportunities—potentially reducing costs by 10–15%. For instance, a retail store owner can identify overspending on utilities and renegotiate contracts, saving ₹50,000 annually. With actionable insights, you’ll make smarter decisions and keep your business financially healthy as you grow.</p>
             </div>
             <div class="feature">
                 <h3>AI Supply Chain Optimizer</h3>
-                <p>Never overstock or run out again. Our AI forecasts inventory needs, optimizes stock levels, and suggests the best suppliers for your business.</p>
+                <p>Inventory mismanagement can cripple small businesses, leading to overstocking or stockouts that hurt sales. Our AI Supply Chain Optimizer uses predictive analytics to forecast inventory needs with precision, ensuring you never overstock or run out. It also evaluates suppliers based on cost, reliability, and delivery speed, helping you choose the best partners. A small manufacturer could reduce excess inventory costs by 20%, saving ₹1,00,000 yearly, while ensuring products are always available for customers. This tool streamlines operations, cuts costs, and keeps your supply chain efficient.</p>
             </div>
         </div>
 
         <div class="waitlist-form" id="waitlist">
-            <h2>Join the Waitlist for Early Access</h2>
+            <h2>Join the Waitlist for Early Access to AI Business Tools</h2>
             <form action="https://formsubmit.co/sethnakola8@gmail.com" method="POST">
-                <input type="text" name="name" placeholder="Enter your name" required>
-                <input type="email" name="email" placeholder="Enter your email" required>
-                <input type="text" name="company" placeholder="Enter your company (optional)">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Your Company (Optional)</label>
+                        <input type="text" id="company" name="company" placeholder="Enter your company (optional)">
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Your Location (Optional)</label>
+                        <input type="text" id="location" name="location" placeholder="Enter your city/region (e.g., Mumbai, India)">
+                    </div>
+                    <div class="form-group">
+                        <label for="business_type">Type of Business (Optional)</label>
+                        <select id="business_type" name="business_type">
+                            <option value="">Select your business type</option>
+                            <option value="Retail">Retail</option>
+                            <option value="Manufacturing">Manufacturing</option>
+                            <option value="Professional Services">Professional Services</option>
+                            <option value="E-commerce">E-commerce</option>
+                            <option value="Hospitality">Hospitality</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="pain_areas">Explain Your Pain Areas in Your Business (Optional)</label>
+                        <textarea id="pain_areas" name="pain_areas" placeholder="Explain your pain areas in your business (e.g., scheduling, finances, inventory) (optional)"></textarea>
+                    </div>
+                </div>
                 <button type="submit">Join Now</button>
             </form>
         </div>
