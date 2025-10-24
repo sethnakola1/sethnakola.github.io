@@ -23,7 +23,6 @@
     .nav a{margin-left:16px; text-decoration:none; color:var(--muted)}
     .cta{background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#0b1220; border:0; padding:10px 16px; border-radius:999px; font-weight:700; cursor:pointer}
     .cta:focus-visible{outline:none; box-shadow:var(--ring)}
-
     /* Hero */
     .hero{display:grid; grid-template-columns:1.15fr 1fr; gap:28px; align-items:center; padding:36px 0}
     .hero h1{font-size:clamp(28px, 5vw, 52px); line-height:1.05; margin:0}
@@ -32,7 +31,6 @@
     .hero img{width:100%; height:100%; object-fit:cover; aspect-ratio:4/3; display:block; filter:saturate(1.05) contrast(1.02)}
     .badges{display:flex; gap:12px; flex-wrap:wrap; margin:18px 0}
     .badge{border:1px solid rgba(148,163,184,.25); color:var(--muted); padding:6px 10px; border-radius:999px; font-size:13px; backdrop-filter: blur(4px); background:rgba(2,6,23,.45)}
-
     /* Sections */
     section{padding:28px 0}
     h2{font-size:clamp(20px,3.5vw,28px); margin:0 0 12px}
@@ -42,17 +40,14 @@
     .card:hover{transform:translateY(-2px); box-shadow:0 10px 30px rgba(34,211,238,.12)}
     .icon{width:36px; height:36px; border-radius:10px; display:grid; place-items:center; background:linear-gradient(135deg, rgba(34,211,238,.25), rgba(96,165,250,.25)); color:#67e8f9; font-weight:800; margin-bottom:8px}
     ul.list{margin:10px 0 0 18px; color:var(--muted)}
-
     /* Report summary */
     .pillars{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px}
     .impact{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px}
     .kp{text-align:center; font-weight:800; color:#a7f3d0}
-
     /* Footer */
     footer{margin-top:28px; padding:18px 0; border-top:1px solid rgba(148,163,184,.15); color:var(--muted)}
     .footer-grid{display:grid; grid-template-columns:1fr auto; gap:12px; align-items:center}
     .links a{margin-right:14px}
-
     /* Accessibility */
     a:focus-visible, button:focus-visible{outline:none; box-shadow:var(--ring)}
     @media (max-width: 920px){ .hero{grid-template-columns:1fr} }
@@ -72,30 +67,28 @@
         <a class="cta" href="mailto:hello@drcare.ai">Get in touch</a>
       </nav>
     </header>
-
     <section class="hero" aria-label="Hero">
       <div>
         <h1>AI-Powered Care, One Click Away</h1>
         <p>Operational intelligence for hospitals, clinicians, and patients. Secure, interoperable, and ready to deploy.</p>
         <div class="badges" role="list" aria-label="Value badges">
           <span class="badge">HIPAA-ready</span>
-          <span class="badge">FHIR & HL7</span>
+          <span class="badge">FHIR &amp; HL7</span>
           <span class="badge">SOC 2 minded</span>
           <span class="badge">Real-time analytics</span>
         </div>
-        <p><a class="cta" href="#features">Explore features</a></p>
+        <a class="cta" href="#features">Explore features</a>
       </div>
       <div class="panel" aria-hidden="false">
-        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1600&auto=format&fit=crop" alt="Professional healthcare team using digital tools. Photo © Unsplash/Erkan Utu"/>
+        <img src="https://s47295.pcdn.co/wp-content/uploads/2021/08/medical-room-conference-interactive-whiteboards-900x450.jpg" alt="Modern medical conference room with interactive whiteboards" />
       </div>
     </section>
-
     <section id="report" aria-label="Feature Impact Report Summary">
       <h2>DrCareAI Feature Impact Report — Executive Summary</h2>
       <p class="kp">Cut time-to-care by up to 35% and reduce admin load by 40%.</p>
       <div class="pillars">
         <div class="card">
-          <h3>1) Safety & Compliance</h3>
+          <h3>1) Safety &amp; Compliance</h3>
           <p class="muted">Privacy-by-design, audit trails, role-based access, and guardrails for AI.</p>
         </div>
         <div class="card">
@@ -115,32 +108,29 @@
       <div class="impact">
         <div class="card"><strong>Clinician</strong><ul class="list"><li>Note drafting saves 12–18 min/visit</li><li>Decision support at point-of-care</li></ul></div>
         <div class="card"><strong>Operations</strong><ul class="list"><li>No-show reduction via smart reminders</li><li>Denial prevention with real-time checks</li></ul></div>
-        <div class="card"><strong>Patients</strong><ul class="list"><li>Faster triage and self-service intake</li><li>Unified portal for records & messages</li></ul></div>
+        <div class="card"><strong>Patients</strong><ul class="list"><li>Faster triage and self-service intake</li><li>Unified portal for records &amp; messages</li></ul></div>
       </div>
     </section>
-
     <section id="features" aria-label="Product features">
       <h2>Product features</h2>
       <div class="grid features">
-        <div class="card"><div class="icon" aria-hidden="true">🏥</div><h3>Hospital</h3><ul class="list"><li>Bed & OR management</li><li>Asset tracking</li><li>Staffing optimization</li></ul></div>
-        <div class="card"><div class="icon" aria-hidden="true">👩‍⚕️</div><h3>Doctor</h3><ul class="list"><li>AI scribe & coding assist</li><li>Orders & e-prescribe</li><li>Clinical decision support</li></ul></div>
-        <div class="card"><div class="icon" aria-hidden="true">🧑‍🤝‍🧑</div><h3>Patient</h3><ul class="list"><li>Intake & triage chatbot</li><li>Care plans & reminders</li><li>Secure messaging</li></ul></div>
-        <div class="card"><div class="icon" aria-hidden="true">💊</div><h3>Pharmacy</h3><ul class="list"><li>Formulary checks</li><li>Drug–drug interactions</li><li>Refill automation</li></ul></div>
-        <div class="card"><div class="icon" aria-hidden="true">🧪</div><h3>Lab</h3><ul class="list"><li>Order routing</li><li>Result normalization</li><li>Critical alerts</li></ul></div>
-        <div class="card"><div class="icon" aria-hidden="true">⚖️</div><h3>Compliance</h3><ul class="list"><li>Access logs</li><li>Consent management</li><li>PHI redaction tools</li></ul></div>
-        <div class="card"><div class="icon" aria-hidden="true">🔔</div><h3>Notifications</h3><ul class="list"><li>Multi-channel outreach</li><li>No-show mitigation</li><li>Context-aware nudges</li></ul></div>
-        <div class="card"><div class="icon" aria-hidden="true">📈</div><h3>Analytics</h3><ul class="list"><li>Operational dashboards</li><li>Cohort outcomes</li><li>Custom KPIs</li></ul></div>
+        <div class="card"><div class="icon" aria-hidden="true">🏥</div><strong>Hospital</strong><ul class="list"><li>Bed &amp; OR management</li><li>Asset tracking</li><li>Staffing optimization</li></ul></div>
+        <div class="card"><div class="icon" aria-hidden="true">👩‍⚕️</div><strong>Doctor</strong><ul class="list"><li>AI scribe &amp; coding assist</li><li>Orders &amp; e-prescribe</li><li>Clinical decision support</li></ul></div>
+        <div class="card"><div class="icon" aria-hidden="true">🧑‍🤝‍🧑</div><strong>Patient</strong><ul class="list"><li>Intake &amp; triage chatbot</li><li>Care plans &amp; reminders</li><li>Secure messaging</li></ul></div>
+        <div class="card"><div class="icon" aria-hidden="true">💊</div><strong>Pharmacy</strong><ul class="list"><li>Formulary checks</li><li>Drug–drug interactions</li><li>Refill automation</li></ul></div>
+        <div class="card"><div class="icon" aria-hidden="true">🧪</div><strong>Lab</strong><ul class="list"><li>Order routing</li><li>Result normalization</li><li>Critical alerts</li></ul></div>
+        <div class="card"><div class="icon" aria-hidden="true">⚖️</div><strong>Compliance</strong><ul class="list"><li>Access logs</li><li>Consent management</li><li>PHI redaction tools</li></ul></div>
+        <div class="card"><div class="icon" aria-hidden="true">🔔</div><strong>Notifications</strong><ul class="list"><li>Multi-channel outreach</li><li>No-show mitigation</li><li>Context-aware nudges</li></ul></div>
+        <div class="card"><div class="icon" aria-hidden="true">📈</div><strong>Analytics</strong><ul class="list"><li>Operational dashboards</li><li>Cohort outcomes</li><li>Custom KPIs</li></ul></div>
       </div>
     </section>
-
     <section aria-label="More visuals">
       <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
-        <div class="card"><img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=1400&auto=format&fit=crop" alt="Doctor viewing imaging on tablet. Photo © Unsplash/Nataliya Vaitkevich" style="width:100%; border-radius:12px;"/></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1580281780460-82d277b0fb52?q=80&w=1400&auto=format&fit=crop" alt="Nurse working in modern hospital. Photo © Unsplash/Hush Naidoo" style="width:100%; border-radius:12px;"/></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1400&auto=format&fit=crop" alt="Lab technician with microscope. Photo © Unsplash/CDC" style="width:100%; border-radius:12px;"/></div>
+        <div class="card"><img src="" alt="Doctor viewing imaging on tablet. Photo © Unsplash/Nataliya Vaitkevich" style="width:100%; border-radius:12px;" /></div>
+        <div class="card"><img src="" alt="Nurse working in modern hospital. Photo © Unsplash/Hush Naidoo" style="width:100%; border-radius:12px;" /></div>
+        <div class="card"><img src="" alt="Lab technician with microscope. Photo © Unsplash/CDC" style="width:100%; border-radius:12px;" /></div>
       </div>
     </section>
-
     <footer>
       <div class="footer-grid">
         <div class="links">
@@ -152,7 +142,6 @@
       </div>
     </footer>
   </div>
-
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
